@@ -1,0 +1,32 @@
+# websraping-email
+
+In this little project, the following topics will be covered:
+
+- datetime types in python
+- Web scraping
+- Internet archive
+- Sending an email
+
+I chose to extract Corona virus numerical data from the website "www.worldometers.info". 
+After a date is set (it is hard coded, but this is not important), 
+the code access the state of that website at that particular date, 
+using the internet archive repository. 
+
+Once landed on the web, information is extracted using the BeautifulSoup package, 
+and stored in a pandas dataframe. 
+
+Finally, an email is sent to the desired account (again, hard coded). 
+In this case, I used a gmail account as a mail server. 
+Make sure that the appropriate setting for this gmail account are met:
+Manage your Google account --> Security --> Less secure App access: On
+
+Note that not all dates will work with this script, 
+because the data is not stored consistently throughout time. 
+The web designers might have changed the way to present the data by, 
+for example, adding extra columns to the tables, 
+or changing the names of the columns, 
+or simply decide to become more visually appealing and remove all numerical data for plots.
+
+In any case, this script serves the purpose of showing the basics of 
+web scraping and email sending, which can then be used in other more 
+sophisticated projects.
